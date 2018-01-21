@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const cssnested = require('postcss-nested')
 const postcss = require('gulp-postcss');
 const cssnext = require('postcss-cssnext');
 const csswring = require('csswring');
@@ -21,11 +20,9 @@ gulp.task('serve', function(){
 gulp.task('css', function(){
 	const processors = [
 			atImport(),
-			cssnested,
 			cssnext({ browsers: ['> 5%', 'ie 8']}),
 			mqpacker()
-			//csswring(),
-			// rename('styles.min.css')
+			//csswring()
 		];
 
 	return gulp.src('./src/styles.css')

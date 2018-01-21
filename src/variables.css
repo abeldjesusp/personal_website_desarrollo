@@ -4,4 +4,34 @@
 	--bg-btn: #ff2b4a;
 	--cl-hover: #ffb546;
 	--cl-text: #fff;
+	--montserrat: 'Montserrat', sans-serif;
+
+	--montserrat-bold: {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 300;
+	};
+
+	--montserrat-light: {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 100;
+	};
+
+
+
+	--btn-layout: {
+		background: var(--bg-btn);
+		color: var(--cl-text);
+		padding: 8px 25px;
+		border: none;
+		text-align: center;
+		display: inline-block;
+		font-size: 1.2rem;
+		cursor: pointer;
+	};
+
+	--fixed-float: {
+		overflow: hidden;
+		clear: both;
+	};
+
 }
