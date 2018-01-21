@@ -1,0 +1,57 @@
+
+/************************************
+ *								    *
+ * Medida para tablets en smarphone *
+ * 								    *
+ ************************************/
+
+@media screen and (max-width: 400px){
+	.banner .banner_text{
+		padding-top: 50px;
+	}
+
+	.main .about .image{
+		width: 50%;
+		margin-bottom: 25px;
+	}
+
+	.main .about .about_text{
+		width: 100%;
+	}
+
+	.main .workignProcess  .process .cards{
+		padding-top: 20px;
+		height: 90px;
+	}
+
+	.main .workignProcess  .process .cards i{
+		font-size: 3.2rem;
+	}
+
+	.main .experience_education .container .experience_work,
+	.education{
+		width: 100%;
+	}
+
+	.main .experience_education .container .experience_work{
+		margin: 0;
+	}
+
+	.main .experience_education .container .education{
+		margin: 25px 0 0 0;
+	}
+
+	.main .works ul li{
+		width: 48%;
+		margin: 0 1% 10px 1%;
+	}
+
+	.main .contact .container .form{
+		width: 100%;
+		margin-bottom: 15%;
+	}
+
+	.main .contact .container .info{
+		width: 100%;
+	}
+}

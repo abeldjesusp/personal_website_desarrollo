@@ -1,0 +1,24 @@
+{
+  "name": "personal_website",
+  "version": "0.1.0",
+  "description": "Mi Web personal",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "browser-sync": "^2.23.5",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1"
+  },
+  "devDependencies": {
+    "css-mqpacker": "^6.0.1",
+    "csswring": "^6.0.2",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-nested": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abel De Jesus",
+  "license": "ISC"
+}
