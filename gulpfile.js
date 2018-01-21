@@ -6,6 +6,7 @@ const csswring = require('csswring');
 const atImport = require('postcss-import');
 const mqpacker = require('css-mqpacker');
 const browserSync = require('browser-sync').create();
+const rename = require('gulp-rename');
 
 //Servidor local
 gulp.task('serve', function(){
@@ -20,14 +21,16 @@ gulp.task('serve', function(){
 gulp.task('css', function(){
 	const processors = [
 			atImport(),
-			cssnested(),
+			cssnested,
 			cssnext({ browsers: ['> 5%', 'ie 8']}),
-			mqpacker(),
-			//csswring()
+			mqpacker()
+			//csswring(),
+			// rename('styles.min.css')
 		];
 
 	return gulp.src('./src/styles.css')
 		.pipe(postcss(processors))
+		.pipe(rename('styles.min.css'))
 		.pipe(gulp.dest('./dist/css'))
 		.pipe(browserSync.stream());
 });
@@ -35,7 +38,7 @@ gulp.task('css', function(){
 //Tarea para vigilar los cambios
 gulp.task('watch', function(){
 	gulp.watch('./src/*.css', ['css']);
-	gulp.watch('./dist/*.html').on('change', browserSync.reload)
+	gulp.watch('./dist/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['watch', 'serve']);

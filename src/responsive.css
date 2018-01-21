@@ -1,57 +1,127 @@
 
-/************************************
- *								    *
- * Medida para tablets en smarphone *
- * 								    *
- ************************************/
+@custom-media --tablet-hrztl screen and (max-width: 1024px);
+@custom-media --tablet-vtcl screen and (max-width: 768px);
+@custom-media --mobile screen and (max-width: 400px);
 
-@media screen and (max-width: 400px){
+@media (--tablet-hrztl){
+	header nav ul li{	
+		margin: 0 5px 10px 0;
+		background: var(--bg-btn);
+		padding: 10px;
+
+		& a:hover{
+			text-decoration: none;
+		}
+	}
+
+	.main .contact .container .form form input{		
+		padding: 10.3px 6px;
+	}
+}
+
+@media (--tablet-vtcl){
+	header {
+		& .logo{
+			width: 100%;
+			& p{
+				text-align: center;
+			}
+		}
+
+		& nav {
+			width: 100%;
+			float: left;
+			margin-top: 20px;
+
+			& ul {
+				float: left;
+			}
+		}
+	}
+
+	.main{
+		& .about {
+			& .about_text{
+				width: 60%;
+			}
+
+			& .image{
+				margin-right: 5%;
+			}
+		}
+
+		& .contact .container .form {
+			& form {
+				margin-top: 30px;
+
+				& input{
+					margin-bottom: 20px;
+				}
+			}
+
+			& .btn{
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+@media (--mobile){
 	.banner .banner_text{
 		padding-top: 50px;
 	}
 
-	.main .about .image{
-		width: 50%;
-		margin-bottom: 25px;
-	}
+	.main{
+		& .about{
+			& .image{
+				width: 50%;
+				margin-bottom: 25px;
+			}
 
-	.main .about .about_text{
-		width: 100%;
-	}
+			& .about_text{
+				width: 100%;
+			}
+		}
 
-	.main .workignProcess  .process .cards{
-		padding-top: 20px;
-		height: 90px;
-	}
+		& .workignProcess  .process .cards{
+			padding-top: 20px;
+			height: 90px;
 
-	.main .workignProcess  .process .cards i{
-		font-size: 3.2rem;
-	}
+			& i{
+				font-size: 3.2rem;
+			}
+		}
 
-	.main .experience_education .container .experience_work,
-	.education{
-		width: 100%;
-	}
+		& .experience_education{
+			& .container {
+				& .experience_work{
+					width: 100%;
+					margin: 0;
+				}
 
-	.main .experience_education .container .experience_work{
-		margin: 0;
-	}
+				& .education{
+					width: 100%;
+					margin: 25px 0 0 0;
+				}
+			}
+		}
 
-	.main .experience_education .container .education{
-		margin: 25px 0 0 0;
-	}
+		& .works ul li{
+			width: 48%;
+			margin: 0 1% 10px 1%;
+		}
 
-	.main .works ul li{
-		width: 48%;
-		margin: 0 1% 10px 1%;
-	}
+		& .contact {
+			& .container {
+				& .form{
+					width: 100%;
+					margin-bottom: 15%;
+				}
 
-	.main .contact .container .form{
-		width: 100%;
-		margin-bottom: 15%;
-	}
-
-	.main .contact .container .info{
-		width: 100%;
+				& .info{
+					width: 100%;
+				}
+			}
+		}
 	}
 }

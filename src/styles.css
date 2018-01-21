@@ -1,19 +1,9 @@
+@import './variables.css';
 @import './responsive.css';
 
 /*********************
  * Estilos Generales *
  *********************/
-
-
-:root{
-	--bg-principal: #5eb8b1;
-	--bg-footer: #222;
-	--bg-btn: #ff2b4a;
-	--cl-hover: #ffb546;
-}
-
-@custom-media --tablet-hrztl (max-width: 1024px);
-@custom-media --tablet-vtcl (max-width: 768px);
 
  *{
  	margin: 0;
@@ -62,7 +52,7 @@
 .banner{
 	background-color: var(--bg-principal);
 	min-height: 550px;
-}  
+}
 
 header{
 	padding-top: 30px;
@@ -74,14 +64,6 @@ header{
 header .logo{
 	width: 40%;
 	float: left;
-
-	@media screen and (--tablet-vtcl){
-		width: 100%;
-
-		&p {
-			text-align: center;
-		}
-	}
 }
 
 header .logo p{
@@ -101,16 +83,6 @@ header nav {
 	float: right;
 	padding: 10px 0;
 	margin-top: 30px;
-
-	@media screen and (--tablet-vtcl){
-		width: 100%;
-		float: left;
-		margin-top: 20px;
-
-		&ul{
-			float: left;
-		}
-	}
 }
 
 header nav ul{
@@ -121,26 +93,13 @@ header nav ul li{
 	list-style: none;
 	display: inline-block;
 	margin-left: 25px;
-	margin-bottom: 10px;
-
-	@media screen and (--tablet-hrztl){
-		margin: 0 5px 10px 0;
-		background: #ff2b4a;
-		padding: 10px;
-	}
-	
+	margin-bottom: 10px;	
 }
 
 header nav ul li a{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
 	font-size: 1rem;
-
-	@media screen and (--tablet-hrztl){
-		&:hover{
-			text-decoration: none;
-		}
-	}
 }
 
 .banner .banner_text{
@@ -175,9 +134,6 @@ header nav ul li a{
 .main .about .image{
 	width: 35%;
 	float: left;
-	@media screen and(--tablet-vtcl){
-		margin-right: 5%;
-	}
 }
 
 .main .about .image img{
@@ -192,10 +148,6 @@ header nav ul li a{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 100;
 	color: #000;
-
-	@media screen and (--tablet-vtcl){
-		width: 60%;		
-	}
 }
 
 .main .about .about_text h2{
@@ -386,28 +338,14 @@ header nav ul li a{
 	margin-top: 25px;
 }
 
-.main .contact .container .form form{
-	@media screen and(--tablet-vtcl){
-		margin-top: 30px;
-	}
-}
-
-
 .main .contact .container .form form input{
 	width: 90%;
 	padding: 8px 6px;
 	margin: 10px 5%;
 	box-sizing: border-box;
-	
-	@media screen and (--tablet-hrztl) {
-			padding: 10.3px 6px;
-	}
 }
 
 .main .contact .container .form form input{
-	@media screen and (--tablet-vtcl){
-		margin-bottom: 20px;
-	}
 
 }
 
@@ -421,10 +359,6 @@ header nav ul li a{
 .main .contact .container .form .btn{
 	float: right;
 	margin: 15px 22px 40px 0;
-
-	@media screen and(--tablet-vtcl){
-		margin-top: 30px;
-	}
 }
 
 .main .contact .container .info{
