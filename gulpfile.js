@@ -21,8 +21,8 @@ gulp.task('css', function(){
 	const processors = [
 			atImport(),
 			cssnext({ browsers: ['> 5%', 'ie 8']}),
-			mqpacker()
-			//csswring()
+			mqpacker(),
+			csswring(),
 		];
 
 	return gulp.src('./src/styles.css')
