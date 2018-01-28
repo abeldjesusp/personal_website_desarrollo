@@ -46,8 +46,9 @@
   *********************/
 
 .banner{
-	background-color: var(--bg-principal);
-	min-height: 600px;
+	background: url("../img/cover.jpg") var(--bg-principal);
+	min-height: 700px;
+	background-size: cover;
 
 	& .banner_text{
 		width: 85%;
@@ -201,20 +202,20 @@ header{
 		@apply --fixed-float;
 		width: 100%;
 		float: left;
-		background-color: var(--bg-principal);
+		background: url("../img/experience.jpg") var(--bg-principal);
 		color: var(--cl-text);
 		text-align: justify;
 
 		& .container{
 			& .experience_work{
-				background: #8bccc5;
+				background: var(--bg-transparent);
 				font-family: var(--montserrat);
 				width: 48%;
 				float: left;
 			}
 
 			& .education{
-				background: #8bccc5;
+				background: var(--bg-transparent);
 				font-family: var(--montserrat);
 				width: 48%;
 				float: left;
@@ -300,7 +301,8 @@ header{
 
 	& .contact{
 		@apply --fixed-float;
-		background: var(--bg-principal);
+		background: url("../img/contact.jpg") var(--bg-principal);
+		background-size: cover;
 		color: var(--cl-text);
 		font-family: var(--montserrat);
 
@@ -309,7 +311,7 @@ header{
 				width: 49%;
 				float: left;
 				margin-right: 1%;
-				background: #8bccc5;
+				background: var(--bg-transparent);
 				text-align: center;
 
 				& h2{
@@ -342,7 +344,7 @@ header{
 				margin-left: 1%;
 
 				& .cards2{
-					background: #8bccc5;
+					background: var(--bg-transparent);
 					margin-bottom: 10px;
 					padding: 30px;
 

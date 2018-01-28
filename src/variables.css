@@ -5,6 +5,7 @@
 	--cl-hover: #ffb546;
 	--cl-text: #fff;
 	--montserrat: 'Montserrat', sans-serif;
+	--bg-transparent: rgba(148, 135, 145, .8);
 
 	--montserrat-bold: {
 		font-family: 'Montserrat', sans-serif;
