@@ -14,8 +14,22 @@
 		}
 	}
 
-	.main .contact .container .form form input{		
-		padding: 10.3px 6px;
+	.main {
+		& .contact{
+			& .container{
+				& .form{
+					& form{
+						& input{
+							padding: 10.3px 6px;
+						}
+					}
+
+					& .btn{
+						margin-top: 13px;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -23,6 +37,7 @@
 	header {
 		& .logo{
 			width: 100%;
+
 			& p{
 				text-align: center;
 			}
@@ -50,17 +65,21 @@
 			}
 		}
 
-		& .contact .container .form {
-			& form {
-				margin-top: 30px;
+		& .contact{
+			& .container{
+				& .form {
+					& form {
+						margin-top: 30px;
 
-				& input{
-					margin-bottom: 20px;
+						& input{
+							margin-bottom: 25px;
+						}
+					}
+
+					& .btn{
+						margin-top: 12px;
+					}
 				}
-			}
-
-			& .btn{
-				margin-top: 30px;
 			}
 		}
 	}

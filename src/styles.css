@@ -13,6 +13,7 @@
  body{
  	font-size: 12pt;
  	font-family:"open sans", Arial, Helvetica, sans-serif;
+ 	background:  var(--bg-body);
  }
 
  header, .container, .footer{
@@ -46,8 +47,8 @@
   *********************/
 
 .banner{
-	background: url("../img/cover.jpg") var(--bg-principal);
-	min-height: 700px;
+	background: url("../img/cover5.jpg") var(--bg-principal);
+	height: 700px;
 	background-size: cover;
 
 	& .banner_text{
@@ -137,11 +138,14 @@ header{
 			width: 65%;
 			text-align: justify;
 			overflow: hidden;
-			@apply --montserrat-light;
-			color: #000;
 
 			& h2{
 				@apply --montserrat-bold;
+			}
+
+			& p{				
+				@apply --montserrat-light;
+				color: #000;
 			}
 		}
 	}
@@ -150,6 +154,7 @@ header{
 		clear: both;
 		width: 100%;
 		text-align: center;
+		background: #f6f6f6;
 
 		& .workignProcess_text{
 			font-family: var(--montserrat);
@@ -177,6 +182,11 @@ header{
 				& i{
 					font-size: 4.5rem;
 					color: var(--cl-text);
+				}
+
+				& h4{
+					margin-top: 25px;
+					@apply --montserrat-bold;
 				}
 			}
 
@@ -249,7 +259,7 @@ header{
 				}
 
 				& hr{
-				    border: 1px solid #a2d6d1;
+				    border: 1px solid rgba(255, 255, 255, .1);
 					display: block;
 				    margin-top: 2em;
 				    margin-bottom:2em;
@@ -285,15 +295,17 @@ header{
 
 			& li{
 				float: left;
-				background:  #002453;
 				width: 23%;
 				margin: 1%;
 				height: 200px;
 				border: 0 solid grey;
 				color: var(--cl-text);
 
-				& img{
-					width: 100%;
+				& a{
+
+					& img{
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -323,18 +335,37 @@ header{
 					padding: 8px 6px;
 					margin: 10px 5%;
 					box-sizing: border-box;
+
+					&[type=text], &[type=email]{
+						background:  transparent;
+						color: var(--cl-text);
+						border: 1px solid var(--cl-text);
+						padding: 15px;
+
+						&:focus{
+							background: var(--bg-transparent);
+						}
+					}
 				}
 
 				& textarea{
 					width: 90%;
 					padding: 8px 6px;
-					margin: 8px 5%;
+					margin: 7px;
 					box-sizing: border-box;
+					resize: none;
+					border: 1px solid var(--cl-text);
+					background: transparent;
+					color: var(--cl-text);
+
+					&:focus{
+						background: var(--bg-transparent);
+					}
 				}
 
 				& .btn{
 					float: right;
-					margin: 15px 22px 40px 0;
+					margin: 0 22px 40px 0;
 				}
 			}
 
@@ -388,6 +419,8 @@ footer{
 		}
 
 		& .text-footer p{
+			@apply --montserrat-bold;
+			font-size: .6rem;
 			padding-bottom: 40px;
 		}
 	}
