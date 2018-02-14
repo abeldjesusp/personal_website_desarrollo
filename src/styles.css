@@ -1,5 +1,6 @@
 @import './variables.css';
 @import './responsive.css';
+@import './burgerMenu.css';
 
 /*********************
  * Estilos Generales *
@@ -47,7 +48,7 @@
   *********************/
 
 .banner{
-	background: url("../img/cover5.jpg") var(--bg-principal);
+	background: url("../img/cover.jpg") var(--bg-principal);
 	height: 700px;
 	background-size: cover;
 
@@ -365,7 +366,7 @@ header{
 
 				& .btn{
 					float: right;
-					margin: 0 22px 40px 0;
+					margin: 16px 22px 24px 0;
 				}
 			}
 

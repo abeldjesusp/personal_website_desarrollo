@@ -22,7 +22,7 @@ gulp.task('css', function(){
 			atImport(),
 			cssnext({ browsers: ['> 5%', 'ie 8']}),
 			mqpacker(),
-			csswring(),
+			csswring()
 		];
 
 	return gulp.src('./src/styles.css')
