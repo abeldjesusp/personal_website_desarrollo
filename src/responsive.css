@@ -4,7 +4,7 @@
 @custom-media --mobile screen and (max-width: 400px);
 
 @media (--tablet-hrztl){
-	header nav ul li{	
+	header nav#navMain{	
 		display: none;
 	}
 

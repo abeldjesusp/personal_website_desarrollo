@@ -94,7 +94,7 @@ header{
 		}
 	}
 
-	& nav {
+	& nav#navMain {
 		width: 60%;
 		float: right;
 		padding: 10px 0;

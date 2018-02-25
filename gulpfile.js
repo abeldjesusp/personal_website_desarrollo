@@ -6,6 +6,10 @@ const atImport = require('postcss-import');
 const mqpacker = require('css-mqpacker');
 const browserSync = require('browser-sync').create();
 const rename = require('gulp-rename');
+const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
+const nested  = require('postcss-nested');
+//const babel = require('gulp-babel');
 
 //Servidor local
 gulp.task('serve', function(){
@@ -21,8 +25,9 @@ gulp.task('css', function(){
 	const processors = [
 			atImport(),
 			cssnext({ browsers: ['> 5%', 'ie 8']}),
-			mqpacker(),
-			csswring()
+			nested(),
+			mqpacker()
+			// csswring()
 		];
 
 	return gulp.src('./src/styles.css')
@@ -32,9 +37,23 @@ gulp.task('css', function(){
 		.pipe(browserSync.stream());
 });
 
+//Tarea para procesar el JS
+gulp.task('js', function(){
+  return gulp.src('./src/*.js')
+    .pipe(sourcemaps.init())
+    // .pipe(babel({
+    // 	presets: ['env']
+    // }))
+    .pipe(concat('app.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(browserSync.stream());
+});
+
 //Tarea para vigilar los cambios
 gulp.task('watch', function(){
 	gulp.watch('./src/*.css', ['css']);
+	gulp.watch('./src/*.js', ['js']);
 	gulp.watch('./dist/*.html').on('change', browserSync.reload);
 });
 
