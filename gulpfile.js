@@ -26,8 +26,8 @@ gulp.task('css', function(){
 			atImport(),
 			cssnext({ browsers: ['> 5%', 'ie 8']}),
 			nested(),
-			mqpacker()
-			// csswring()
+			mqpacker(),
+			csswring()
 		];
 
 	return gulp.src('./src/styles.css')

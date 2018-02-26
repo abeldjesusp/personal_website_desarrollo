@@ -1,18 +1,15 @@
 if( 'ontouchstart' in window ){ var click = 'touchstart'; }
 else { var click = 'click'; }
 
-
 $('.burger').on(click, function(){
 		if( !$(this).hasClass('open') ){ openMenu(); } 
 		else { closeMenu(); }
 });	
 
-
 $('.menu ul li a').on(click, function(e){
 	e.preventDefault();
 	closeMenu();
 });
-
 
 function openMenu(){
 	
@@ -34,7 +31,6 @@ function openMenu(){
 }
 
 function closeMenu(){
-
 	$('.menu li').removeClass('animate');
 	setTimeout(function(){ 			
 		$('.burger').removeClass('open');	
@@ -50,6 +46,5 @@ function closeMenu(){
 			$('.y').show(); 
 			$('.x, .z').removeClass('collapse');
 		}, 70);
-	}, 100);													
-	
+	}, 100);
 }
